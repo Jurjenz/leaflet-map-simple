@@ -25,7 +25,7 @@
 <body>
 
   <!-- Display the map and title with HTML division tags  -->
-  <div id="map-title">EDIT your map title</div>
+  <div id="map-title">Leaflet Web Mapping Tutorial</div>
   <div id="map"></div>
 
   <!-- Create the map content with JavaScript (.js) -->
@@ -34,8 +34,7 @@
   /* Set up the map with initial center and zoom level */
   var map = L.map('map', {
     center: [52.091160, 5.082959], // EDIT latitude, longitude to re-center map
-    zoom: 15,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
-    scrollWheelZoom: true
+    zoom: 15  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
   });
 
   /* Control panel to display map layers */
