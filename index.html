@@ -68,11 +68,11 @@
       layer.bindPopup(feature.properties.Title);
     }
    });
-   var runLayer = omnivore.csv('data.csv', null, customLayer)
-   .on('ready', function() {
-    map.fitBounds(runLayer.getBounds());
-   }).addTo(map);
-   controlLayers.addOverlay(customLayer, 'Markers from data.csv');
+   //var runLayer = omnivore.csv('data.csv', null, customLayer)
+   //.on('ready', function() {
+   // map.fitBounds(runLayer.getBounds());
+   //}).addTo(map);
+  // controlLayers.addOverlay(customLayer, 'Markers from data.csv');
     
     var url = 'https://geodata.nationaalgeoregister.nl/bag/wfs?';
             var params = 'request=GetFeature&';
