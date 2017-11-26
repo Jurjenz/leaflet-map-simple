@@ -73,7 +73,20 @@
     map.fitBounds(runLayer.getBounds());
    }).addTo(map);
    controlLayers.addOverlay(customLayer, 'Markers from data.csv');
-
+    
+    var url = 'https://geodata.nationaalgeoregister.nl/bag/wfs?';
+            var params = 'request=GetFeature&';
+            params += 'service=WFS&';
+            params += 'typeName=bag:pand&';
+            params += 'count=100&';
+            params += 'outputFormat=json&';
+            params += 'srsName=EPSG:4326&';
+            params += 'bbox=232425,583269,234365,584240';
+            $.getJSON(url + params, function(data) {
+                $.each(data.features, function(index, geometry) {
+                    L.geoJson(geometry).addTo(map);
+                });
+            });
   </script>
 </body>
 </html>
